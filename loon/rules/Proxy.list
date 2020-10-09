@@ -30,6 +30,7 @@ DOMAIN-KEYWORD,tesla
 USER-AGENT,battleroyale*
 
 # > Top blocked sites
+DOMAIN-SUFFIX,kik.com
 DOMAIN-SUFFIX,2o7.net
 DOMAIN-SUFFIX,4everProxy.com
 DOMAIN-SUFFIX,4shared.com
