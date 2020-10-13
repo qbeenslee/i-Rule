@@ -1,12 +1,11 @@
 var body = $response.body;
 var url = $request.url;
+var obj = JSON.parse(body);
 
 if (url.indexOf("/ad/getAll") != -1) {
-    var obj = JSON.parse(body);
     obj.data.adList = [];
     body = JSON.stringify(obj);
 } else if (url.indexOf("/user/privilege/list") != -1) {
-    var obj = JSON.parse(body);
     obj.data = [
         {
             id: 1,
@@ -90,11 +89,8 @@ if (url.indexOf("/ad/getAll") != -1) {
         },
     ];
 } else if (url.indexOf("/rrtv-video/v4plus/season/detail") != -1) {
-    var obj = JSON.parse(body);
-
     obj.data["season"]["feeMode"] = "restriction";
 } else if (url.indexOf("/user/profile") != -1) {
-    var obj = JSON.parse(body);
     obj.data.user.medalList = [
         {
             name: "大魔王",
@@ -110,12 +106,12 @@ if (url.indexOf("/ad/getAll") != -1) {
         },
     ];
     obj.data.user.vipMedal = {
-        "name": "大魔王",
-        "endTime": "2020-11-14 22:05:19",
-        "imgUrl": "http://img.rr.tv/cover/20200424/o_1587720799676.png",
-        "id": 1,
-        "isExpired": false
-      };
+        name: "大魔王",
+        endTime: "2020-11-14 22:05:19",
+        imgUrl: "http://img.rr.tv/cover/20200424/o_1587720799676.png",
+        id: 1,
+        isExpired: false,
+    };
     obj.data.user.privilegeList = [
         {
             id: null,
@@ -222,6 +218,43 @@ if (url.indexOf("/ad/getAll") != -1) {
             endTime: 1605362719000,
         },
     ];
+} else if (url.indexOf("/v3plus/medal/expired") != -1) {
+    obj.data = false;
+    obj.msg = "Success";
+    obj.code = "0000";
+} else if (url.indexOf("/watch/v4/priority_video_quality") != -1) {
+    obj.data = {
+        sortedItems: [
+            {
+                qualityDescription: "高清",
+                qualityCode: "SD",
+                canPlay: true,
+                canShowVip: false,
+                initialQuality: true,
+            },
+            {
+                qualityDescription: "超清",
+                qualityCode: "HD",
+                canPlay: true,
+                canShowVip: false,
+                initialQuality: false,
+            },
+            {
+                qualityDescription: "原画",
+                qualityCode: "OD",
+                canPlay: true,
+                canShowVip: true,
+                initialQuality: false,
+            },
+            {
+                qualityDescription: "AI原画",
+                qualityCode: "AI_OD",
+                canPlay: true,
+                canShowVip: true,
+                initialQuality: false,
+            },
+        ],
+    };
 }
 
 body = JSON.stringify(obj);
