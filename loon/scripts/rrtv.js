@@ -95,7 +95,7 @@ if (url.indexOf("/ad/getAll") != -1) {
     obj.data["season"]["feeMode"] = "restriction";
 } else if (url.indexOf("/user/profile") != -1) {
     var obj = JSON.parse(body);
-    obj.medalList = [
+    obj.data.user.medalList = [
         {
             name: "大魔王",
             endTime: "2020-11-14 22:05:19",
@@ -109,7 +109,7 @@ if (url.indexOf("/ad/getAll") != -1) {
             id: 2,
         },
     ];
-    obj.privilegeList = [
+    obj.data.user.privilegeList = [
         {
             id: null,
             createTimeStr: "",
