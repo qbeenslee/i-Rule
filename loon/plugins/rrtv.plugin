@@ -13,7 +13,8 @@ http-response ^https?:\/\/api\.rr\.tv\/watch\/v\d\/get_movie_info script-path=ht
 # rrsp_banner
 http-response ^https?:\/\/api\.rr\.tv\/v\dplus\/index\/channel$ script-path=https://raw.githubusercontent.com/Choler/Surge/master/Script/rrsp.js, requires-body=true, timeout=10, tag=rrsp_banner
 
-
+# 人人视频 旧版本api限制解除 id77
+http-request ^https:\/\/api\.rr\.tv script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/rrtv.js, tag=人人视频 旧版本api限制解除
 
 [MITM]
 hostname = api.rr.tv
