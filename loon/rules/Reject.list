@@ -8263,16 +8263,6 @@ DOMAIN,newloc.map.n.shifen.com
 URL-REGEX,^http:\/\/[\s\S]*baidu\.com/.*ad[xs]\.php
 URL-REGEX,^http:\/\/c\.tieba\.baidu\.com\/c\/s\/splashSchedule$
 
-# > Bilibili
-#DOMAIN,miniapp.bilibili.com
-#DOMAIN,thirdparty.biliapi.com
-#URL-REGEX,https://app.bilibili.com/x/v2/param
-#URL-REGEX,https://app.bilibili.com/x/resource/abtest
-#URL-REGEX,http://app.bilibili.com/x/v2/dataflow/report-TINYGIF
-#URL-REGEX,https://app.bilibili.com/x/v2/search/(defaultword|hot|recommend|resource)
-#URL-REGEX,https://app.bilibili.com/x/v2/rank.*rid=(168|5)
-#URL-REGEX,https://api.bilibili.com/pgc/season/rank/cn
-
 # > Didi
 URL-REGEX,^https:\/\/img-ys011\.didistatic\.com\/static\/ad_oss\/image-\d{4}-\d{4}\/
 
