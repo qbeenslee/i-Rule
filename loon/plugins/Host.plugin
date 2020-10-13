@@ -17,3 +17,4 @@
 *.xiaomi.com = server:119.29.29.29
 *.pcbeta.com = server:120.52.19.113
 *testflight.apple.com = server:8.8.4.4
+*.google.com = 8.8.8.8
