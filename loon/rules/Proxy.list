@@ -323,6 +323,7 @@ DOMAIN-SUFFIX,newipnow.com
 DOMAIN-SUFFIX,nextmedia.com
 DOMAIN-SUFFIX,nicovideo.jp
 DOMAIN-SUFFIX,nih.gov
+DOMAIN-SUFFIX,nikkei.com
 DOMAIN-SUFFIX,nimg.jp
 DOMAIN-SUFFIX,nintendo.com
 DOMAIN-SUFFIX,nintendo.net
@@ -617,6 +618,7 @@ DOMAIN-SUFFIX,zalmos.com
 DOMAIN-SUFFIX,zaobao.com.sg
 DOMAIN-SUFFIX,zeutch.com
 DOMAIN-SUFFIX,zynamics.com
+
 
 # > Force some domains which are fucked by GFW while resolving DNS,or do not respect the system Proxy
 USER-AGENT,WhatsApp*
