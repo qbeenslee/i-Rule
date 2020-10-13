@@ -109,6 +109,13 @@ if (url.indexOf("/ad/getAll") != -1) {
             id: 2,
         },
     ];
+    obj.data.user.vipMedal = {
+        "name": "大魔王",
+        "endTime": "2020-11-14 22:05:19",
+        "imgUrl": "http://img.rr.tv/cover/20200424/o_1587720799676.png",
+        "id": 1,
+        "isExpired": false
+      };
     obj.data.user.privilegeList = [
         {
             id: null,
