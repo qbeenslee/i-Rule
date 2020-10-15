@@ -6,48 +6,6 @@
 (?<=\?version_code=)1[6-9]..(?=.?.?&) url 17.. 307
 (.*video_id=\w{32})(.*watermark=)(.*) url  $1 302
 
-
-# (?<=_region=)CN(?=&) JP 307
-# (?<=&app_version=)1[6-9]..(?=.?.?&) 100. 307
-# (?<=\?version_code=)1[6-9]..(?=.?.?&) 100. 307
-# ^https://api[\w-]*?.tiktokv.com/aweme/v\d/policy/notice/? - reject
-
-
-# > TikTok Unlock (By Choler)
-# 区域请修改下方国家代码，默认为日本 JP
-
-# 1 worked
-#(?<=_region=)CN(?=&) JP 307
-#(?<=&app_version=)16..(?=.?.?&) 1 307
-#(?<=\?version_code=)16..(?=.?.?&) 1 307
-
-#(?<=_region=)CN(?=&) JP 307
-#(?<=&app_version=)15.9.1(?=.?.?&) 1 307
-#(?<=\?version_code=)15.9.1(?=.?.?&) 1 307
-
-
-# 2 worked
-#(.*video_id=\w{32})(.*watermark=)(.*) $1 302
-#(?<=(carrier|sys)_region=)CN JP 307
-#(?<=version_code=)\d{1,}.\d{1}\.\d{1} 8.0.0 307
-#
-#^https?://api\d?.tiktokv.com/api/ad/ - reject
-#^https?://api\d?.musical.ly/api/ad/ - reject
-
-# 3 worked perfect
-#(?<=_region=)CN(?=&) JP 307
-#(?<=&app_version=)17.6.0(?=.?.?&) 1 307
-#(?<=\?version_code=)17.6.0(?=.?.?&) 1 307
-#
-#^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/feed\/ https://aweme.snssdk.com/aweme/v1/feed/ header
-#^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/aweme\/post\/ https://aweme.snssdk.com/aweme/v1/aweme/post/ header
-#^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/follow\/feed\/ https://aweme.snssdk.com/aweme/v1/follow/feed/ header
-#^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/nearby\/feed\/ https://aweme.snssdk.com/aweme/v1/nearby/feed/ header
-#^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/search\/item\/ https://aweme.snssdk.com/aweme/v1/search/item/ header
-#^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/general\/search\/single\/ https://aweme.snssdk.com/aweme/v1/general/search/single/ header
-#^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/hot/search\/video\/list\/ https://aweme.snssdk.com/aweme/v1/hot/search/video/list/ header
-#
-
 [Rule]
 # > TikTok
 USER-AGENT,TikTok*
