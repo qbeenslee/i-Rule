@@ -8750,7 +8750,6 @@ DOMAIN-SUFFIX,aol.com,Proxy
 DOMAIN-SUFFIX,aolcdn.com,Proxy
 DOMAIN-SUFFIX,api.mixpanel.com,Proxy
 DOMAIN-SUFFIX,api.termius.com,Proxy
-DOMAIN-SUFFIX,api.tiktokv.com,Proxy
 DOMAIN-SUFFIX,api.urbandictionary.com,Proxy
 DOMAIN-SUFFIX,apigee.com,Proxy
 DOMAIN-SUFFIX,apk-dl.com,Proxy
@@ -9459,14 +9458,6 @@ DOMAIN-SUFFIX,playstation.net,Domestic
 DOMAIN-SUFFIX,playstationnetwork.com,Domestic
 DOMAIN-SUFFIX,sony.com,Domestic
 DOMAIN-SUFFIX,sonyentertainmentnetwork.com,Domestic
-
-# > TikTok
-#USER-AGENT,TikTok*,Proxy
-#DOMAIN-SUFFIX,muscdn.com,Proxy
-#DOMAIN-SUFFIX,musical.ly,Proxy
-#DOMAIN-SUFFIX,tiktokv.com,Proxy
-#DOMAIN-SUFFIX,tiktokcdn.com,Proxy
-#DOMAIN-KEYWORD,-tiktokcdn-com,Proxy
 
 # > TeamViewer
 IP-CIDR,185.188.32.0/24,Domestic
