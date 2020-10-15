@@ -64,5 +64,5 @@ DOMAIN-KEYWORD,-tiktokcdn-com
 
 
 
-[MITM]
-hostname = *.tiktokv.com, *.byteoversea.com, *.musical.ly, *.snssdk.com
+#[MITM]
+#hostname = *.tiktokv.com, *.byteoversea.com, *.musical.ly, *.snssdk.com
