@@ -1,0 +1,126 @@
+[Script]
+
+#------------------------------------- Cookie -------------------------------------
+# > 京东
+# 浏览器登录 https://bean.m.jd.com 点击签到并且出现签到日历
+http-request https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageIndex) max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+
+# > 京东成长分 (By @barrymchen)
+http-request ^https:\/\/ms\.jr\.jd\.com\/gw\/generic\/bt\/h5\/m\/queryUserSignFlow script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jdczfcookie.js
+
+# > 京东到家 (By @barrymchen, @GideonSenku & @Macsuny)
+http-request https:\/\/daojia\.jd\.com\/client\?_jdrandom=\d{13}&functionId=%2Fsignin script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jddj.js
+
+# > 微信小程序 来客有礼
+http-request https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/square\/silverBean\/task\/get\? script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js,enabled=true
+
+
+# > 京东价格提醒(By toulanboy)
+^http-request https:\/\/apapia-history\.manmanbuy\.com\/ChromeWidgetServices\/WidgetServices\.ashx script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/jd_price_detect/jd_price_detect.js,requires-body=true, tag=京东价格提醒cookie获取
+
+# 宠汪汪强制为别人助力
+http-request ^https:\/\/draw\.jdfcloud\.com\/\/pet\/enterRoom\?reqSource=weapp&invitePin=.*+(&inviteSource=task_invite&shareSource=\w+&inviteTimeStamp=\d+&openId=\w+)?|^https:\/\/draw\.jdfcloud\.com\/\/pet\/helpFriend\?friendPin script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_help.js, requires-body=true, timeout=10, tag=宠汪汪强制为别人助力
+
+# 宠汪汪助力获取Cookie
+http-response ^https:\/\/draw\.jdfcloud\.com\/\/api\/user\/addUser\?code=\w+& script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_run.js, requires-body=true, timeout=10, tag=宠汪汪助力更新Token
+
+http-request ^https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/square\/silverBean\/task\/get\? script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_run.js, requires-body=true, timeout=10, tag=宠汪汪助力获取Token
+
+# 京东读书 @𝐗𝐢𝐝𝐍 𝐃𝐃
+http-request ^https:\/\/jdread-api\.jd\.com\/* script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/jddsSign.js, requires-body=true, timeout=10, tag=京东读书签到
+
+
+#------------------------------------- Tasks -------------------------------------
+
+
+# > 京东价格提醒(By toulanboy)
+cron "5 0 * * *" script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/jd_price_detect/jd_price_detect.js, tag=京东价格提醒,enabled=false
+
+# 东东
+cron "12 0 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js,tag=东东
+
+# 京东白条
+cron "5 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/jd/JD_BaiTiao.js
+
+# 东东农场
+cron "5 6-18/6 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_fruit.js,tag=东东农场
+
+# 东东萌宠
+cron "10 7-19/6 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_pet.js,tag=东东萌宠
+
+# 京东种豆得豆
+cron "1 7-21/2 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_plantBean.js,tag=京东种豆得豆
+
+# 宠汪汪(主要是日常任务,不过里面也有喂食和领取三餐狗粮)
+cron "15 */2 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy.js,tag=宠汪汪
+
+# 宠汪汪喂食
+cron "12 */1 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_feedPets.js,tag=宠汪汪喂食
+
+# 宠汪汪偷好友积分与狗粮
+cron "0 0,6 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_steal.js,tag=宠汪汪偷好友积分与狗粮
+
+# 宠汪汪积分兑换奖品
+cron "1 0,8,12,16 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_reward.js,tag=宠汪汪积分兑换奖品
+
+# 京东天天加速
+cron "8 */3 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_speed.js,tag=京东天天加速
+
+# 京东摇钱树
+cron "3 */3 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_moneyTree.js,tag=京东摇钱树
+
+# 京小超
+cron "11 1-23/5 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_superMarket.js,tag=京小超
+
+# 京小超领蓝币(兑换京豆)
+cron "20 5 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_blueCoin.js,tag=京小超领蓝币(兑换京豆)
+
+# 进店领豆
+cron "10 0 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_shop.js,tag=进店领豆
+ 
+# 取关京东店铺商品
+cron "55 23 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_unsubscribe.js,tag=取关京东店铺商品
+
+# 宠汪汪邀请助力与赛跑助力
+cron "15 10 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_run.js, tag=宠汪汪邀请助力与赛跑助力
+
+# 京东手机狂欢城
+cron "1 0-18/6 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_818.js,tag=京东手机狂欢城
+
+# > 京东成长分 (By @barrymchen)
+#打开京东金融app，“信用”-》“小白成长分”
+cron "0 10 8 * * *" script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jdczf.js,tag= 京东成长分
+
+# > 京东到家 (@barrymchen, @GideonSenku & @Macsuny)
+#APP登陆账号后，点击主页’签到‘,即可
+cron "30 10 8 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jddj.js,tag=京东到家
+
+# > 微信小程序-来客有礼 (By @Macsuny)
+# 微信搜索’来客有礼‘小程序,登陆京东账号，点击’领京豆->翻牌‘
+cron "40 10 8 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js,tag=来客有礼
+
+# 京东特权值 id iisams 
+cron "5 8 * * *" script-path=https://raw.githubusercontent.com/iisams/Scripts/master/liwo/jdtqz.js, tag= 京东特权值
+
+# 京东读书
+cron "0 10 0 * * *" script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/jddsSign.js
+
+# 京喜
+cron "7 0 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jingxi.js,enabled=false
+
+#------------------------------------- Scripts -------------------------------------
+
+
+# > yichahucha
+# > 京东比价
+http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js,tag=京东比价
+
+
+# 聚宝盆投狗粮辅助
+http-response ^https:\/\/jdjoy\.jd\.com\/pet\/getPetTreasureBox|^https:\/\/draw\.jdfcloud\.com\/\/pet\/getPetTreasureBox script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_petTreasureBox.js, requires-body=true, timeout=10, tag=聚宝盆投狗粮辅助
+ 
+# > 京东APP商品显示历史价格（20200904） 公众号墨鱼手记
+http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/jd_price.js,tag=京东历史价格
+
+[MITM]
+hostname = api.m.jd.com, jdread-api.jd.com,draw.jdfcloud.com,daojia.jd.com,ms.jr.jd.com,jdjoy.jd.com
