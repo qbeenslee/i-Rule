@@ -33,7 +33,7 @@ http-request ^https:\/\/jdread-api\.jd\.com\/* script-path=https://raw.githubuse
 #------------------------------------- Tasks -------------------------------------
 
 # 京东手机狂欢城
-cron ”1 0-18/6 * * *“ script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_818.js,tag=京东手机狂欢城
+cron "1 0-18/6 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_818.js, tag=京东手机狂欢城
 
 # > 京东价格提醒(By toulanboy)
 cron "5 0 * * *" script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/jd_price_detect/jd_price_detect.js, tag=京东价格提醒,enabled=false
