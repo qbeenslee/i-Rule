@@ -349,7 +349,7 @@ function initial() {
 //通知
 function msgShow() {
   let url ={ "open-url" : `openjd://virtual?params=%7B%20%22category%22:%20%22jump%22,%20%22des%22:%20%22m%22,%20%22url%22:%20%22https://h5.m.jd.com/babelDiy/Zeus/3DDunaJMLDamrmGwu73QbqtGtbX1/index.html%22%20%7D`}
-  $.msg($.Name,"","京东账号：" + merge.nickname +"\n任务已做完！逛同城好店请手动做",url)
+  //$.msg($.Name,"","京东账号：" + merge.nickname +"\n任务已做完！逛同城好店请手动做",url)
 }
 
 
