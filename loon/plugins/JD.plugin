@@ -4,33 +4,16 @@
 # > 京东
 # 浏览器登录 https://bean.m.jd.com 点击签到并且出现签到日历
 http-request https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageIndex) max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
-
-# > 京东成长分 (By @barrymchen)
-http-request ^https:\/\/ms\.jr\.jd\.com\/gw\/generic\/bt\/h5\/m\/queryUserSignFlow script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jdczfcookie.js
-
-# > 京东到家 (By @barrymchen, @GideonSenku & @Macsuny)
-http-request https:\/\/daojia\.jd\.com\/client\?_jdrandom=\d{13}&functionId=%2Fsignin script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jddj.js
-
-# > 微信小程序 来客有礼
-http-request https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/square\/silverBean\/task\/get\? script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js,enabled=true
-
-
-# > 京东价格提醒(By toulanboy)
+http-request ^https:\/\/ms\.jr\.jd\.com\/gw\/generic\/bt\/h5\/m\/queryUserSignFlow script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jdczfcookie.js,tag=京东成长分 (By @barrymchen)
+http-request https:\/\/daojia\.jd\.com\/client\?_jdrandom=\d{13}&functionId=%2Fsignin script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jddj.js, tag=京东到家 (By @barrymchen, @GideonSenku & @Macsuny)
+http-request https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/square\/silverBean\/task\/get\? script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js,enabled=true,tag=微信小程序 来客有礼
 ^http-request https:\/\/apapia-history\.manmanbuy\.com\/ChromeWidgetServices\/WidgetServices\.ashx script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/jd_price_detect/jd_price_detect.js,requires-body=true, tag=京东价格提醒cookie获取
-
-# 宠汪汪强制为别人助力
 http-request ^https:\/\/draw\.jdfcloud\.com\/\/pet\/enterRoom\?reqSource=weapp&invitePin=.*+(&inviteSource=task_invite&shareSource=\w+&inviteTimeStamp=\d+&openId=\w+)?|^https:\/\/draw\.jdfcloud\.com\/\/pet\/helpFriend\?friendPin script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_help.js, requires-body=true, timeout=10, tag=宠汪汪强制为别人助力
-
-# 宠汪汪助力获取Cookie
 http-response ^https:\/\/draw\.jdfcloud\.com\/\/api\/user\/addUser\?code=\w+& script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_run.js, requires-body=true, timeout=10, tag=宠汪汪助力更新Token
-
 http-request ^https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/square\/silverBean\/task\/get\? script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_run.js, requires-body=true, timeout=10, tag=宠汪汪助力获取Token
-
-# 京东读书 @𝐗𝐢𝐝𝐍 𝐃𝐃
+http-request ^https:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/h5\/m\/recommendGetWay script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/tie/tie_cookie.js, tag=京东金额提额
 http-request ^https:\/\/jdread-api\.jd\.com\/* script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/jddsSign.js, requires-body=true, timeout=10, tag=京东读书签到
-
-# yangtingxiao （operation-api.jimistore.com）
-http-request ^https:\/\/operation-api\.jimistore\.com\/* script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/ttwk/ttwk.js, requires-body=true, timeout=10, tag=天天挖矿
+http-request ^https:\/\/operation-api\.jimistore\.com\/* script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/ttwk/ttwk.js, requires-body=true, timeout=10, tag=天天挖矿(operation-api.jimistore.com)
                                                
 
 #------------------------------------- Tasks -------------------------------------
@@ -85,7 +68,6 @@ cron "20 0-20/4 * * *" script-path=https://raw.githubusercontent.com/yangtingxia
 
 
 # > yichahucha
-# > 京东比价
 http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js,tag=京东比价
 
 
@@ -96,4 +78,4 @@ http-response ^https:\/\/jdjoy\.jd\.com\/pet\/getPetTreasureBox|^https:\/\/draw\
 http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/jd_price.js,tag=京东历史价格
 
 [MITM]
-hostname = api.m.jd.com, jdread-api.jd.com,draw.jdfcloud.com,daojia.jd.com,ms.jr.jd.com,jdjoy.jd.com
+hostname = api.m.jd.com, jdread-api.jd.com,draw.jdfcloud.com,daojia.jd.com,ms.jr.jd.com,jdjoy.jd.com,operation-api.jimistore.com
