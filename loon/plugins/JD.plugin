@@ -13,7 +13,7 @@ http-response ^https:\/\/draw\.jdfcloud\.com\/\/api\/user\/addUser\?code=\w+& sc
 http-request ^https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/square\/silverBean\/task\/get\? script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_run.js, requires-body=true, timeout=10, tag=宠汪汪助力获取Token
 http-request ^https:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/h5\/m\/recommendGetWay script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/tie/tie_cookie.js, tag=京东金额提额
 http-request ^https:\/\/jdread-api\.jd\.com\/* script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/jddsSign.js, requires-body=true, timeout=10, tag=京东读书签到
-http-request ^https:\/\/operation-api\.jimistore\.com\/* script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/ttwk/ttwk.js, requires-body=true, timeout=10, tag=天天挖矿(operation-api.jimistore.com)
+# http-request ^https:\/\/operation-api\.jimistore\.com\/* script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/ttwk/ttwk.js, requires-body=true, timeout=10, tag=天天挖矿(operation-api.jimistore.com)
                                                
 
 #------------------------------------- Tasks -------------------------------------
@@ -33,11 +33,11 @@ cron "11 1-23/5 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scr
 cron "20 5 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_blueCoin.js,timeout=30, tag=京小超领蓝币(兑换京豆)
 cron "55 23 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_unsubscribe.js,timeout=30, tag=取关京东店铺商品
 cron "10 0 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_shop.js,timeout=30, tag=进店领豆
-cron "1 0-18/6 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_818.js, timeout=30, tag=京东手机狂欢城
+# cron "1 0-18/6 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_818.js, timeout=30, tag=京东手机狂欢城
 cron "15 10 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_run.js, timeout=30, tag=宠汪汪邀请助力与赛跑助力
 cron "1 1 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_redPacket.js, tag=京东全民开红包
 cron "0 9 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_baiTiao.js, tag=京东白条
-cron "0 0 * * *" script-path=https://raw.githubusercontent.com/qbeenslee/i-Rule/master/loon/scripts/jd_xtg.js, tag=星推, enabled=false
+#cron "0 0 * * *" script-path=https://raw.githubusercontent.com/qbeenslee/i-Rule/master/loon/scripts/jd_xtg.js, tag=星推, enabled=false
 cron "20 * * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_collectProduceScore.js, tag=京东全民营业领金币, enabled=false
 
 # By NobyDa    GitHub：https://github.com/NobyDa/Script/tree/master
@@ -61,8 +61,8 @@ cron "10 10 8 * * *" script-path=https://raw.githubusercontent.com/barrym-chen/S
 cron "5 8 * * *" script-path=https://raw.githubusercontent.com/iisams/Scripts/master/liwo/jdtqz.js, tag= 京东特权值
 
 # yangtingxiao
-cron "5 9-22 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_bigWinner.js, tag=京东大赢家, enabled=false
-cron "10 1 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/ttwk/ttwk.js, tag=天天挖矿, enabled=false
+# cron "5 9-22 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_bigWinner.js, tag=京东大赢家, enabled=false
+# cron "10 1 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/ttwk/ttwk.js, tag=天天挖矿, enabled=false
 cron "20 0-20/4 * * *" script-path=https://raw.githubusercontent.com/qbeenslee/i-Rule/master/loon/scripts/jd_timeMachine.js, tag=京东时光机
 #------------------------------------- Scripts -------------------------------------
 
