@@ -1,6 +1,8 @@
 #DIY
 DOMAIN-SUFFIX,workingcopyapp.com
-
+DOMAIN-SUFFIX,com.cn
+DOMAIN-SUFFIX,anjuke.com
+DOMAIN-SUFFIX,alookbrowser.com 
 
 
 # > Beplay
@@ -50,6 +52,7 @@ DOMAIN-SUFFIX,360buyimg.com
 DOMAIN-SUFFIX,36kr.com
 DOMAIN-SUFFIX,51ym.me
 DOMAIN-SUFFIX,58.com
+DOMAIN-SUFFIX,58.com.cn
 DOMAIN-SUFFIX,8686c.com
 DOMAIN-SUFFIX,abercrombie.com
 DOMAIN-SUFFIX,acfun.tv
