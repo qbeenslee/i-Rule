@@ -7,6 +7,8 @@ DOMAIN-SUFFIX, byteimg.com, DIRECT
 DOMAIN-SUFFIX, dig.bdurl.net, DIRECT
 DOMAIN-SUFFIX, ibytedtos.com, REJECT
 DOMAIN-SUFFIX, ipstatp.com, REJECT
+DOMAIN-SUFFIX, tiktokcdn.com, DIRECT
+DOMAIN-SUFFIX, tiktokcdn-in.com, DIRECT
 
 [Url Rewrite]
 ^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/feed\/ https://aweme.snssdk.com/aweme/v1/feed/ header
