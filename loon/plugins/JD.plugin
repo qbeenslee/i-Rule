@@ -80,6 +80,13 @@ cron "20 0-20/4 * * *" script-path=https://raw.githubusercontent.com/qbeenslee/i
 # whyour
 cron "10 * * * *" script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_story.js, tag=京喜金牌厂长
 
+cron "30 23 * * *" script-path=https://raw.githubusercontent.com/MoPoQAQ/Script/main/Me/jx_cfd.js,tag=京喜财富岛
+
+
+
+
+
+
 
 #------------------------------------- Scripts -------------------------------------
 
