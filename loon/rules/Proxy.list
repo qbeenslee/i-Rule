@@ -1,6 +1,9 @@
 # > TestFlight
 DOMAIN,testflight.apple.com
 DOMAIN-SUFFIX,clubhouseapi.com
+DOMAIN-SUFFIX,clubhouse.pubnub.com
+DOMAIN-SUFFIX,clubhouseprod.s3.amazonaws.com
+
 DOMAIN-SUFFIX,dcard.tw
 
 
